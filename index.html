@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width ,initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.rtl.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/weather.js" defer></script>
+    <script src="js/ui.js" defer></script>
+    <script src="js/storage.js"></script>
+    <script src="js/app.js" defer></script>
+
+    <title>Weather</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item0">
+            <div id="w-location"></div>
+            <div id="w-main"></div>
+            <img id="w-icon"></img>
+        </div>
+        <div class="item1">
+            <div class="No1innerItem1">دما:</div>
+            <div id="w-temp"></div>
+            <div class="No1innerItem2">کمترین دما:</div>
+            <div id="w-temp_min"></div>
+            <div class="No1innerItem3" >بیشترین دما:</div>
+            <div id="w-temp_max"></div>
+        </div>
+        <div class="item2">
+            <div >فشار:</div>
+            <div id="w-pressure"></div>
+        </div>
+        <div class="item3">
+            <div>رطوبت:</div>
+            <div id="w-humidity"></div>
+        </div>
+        <div class="item4">
+            <div>سرعت باد:</div>
+            <div id="w-wind_speed"></div>
+        </div>
+        <div class="item5">
+            <div class="No5innerItem1">طول جغرافیایی:</div>
+            <div id="w-lon"></div>
+            <div class="No5innerItem2">عرض جغرافیایی:</div>
+            <div id="w-lat"></div>
+        </div>
+        <div class="item6">
+            <button class="No6innerButton btn btn-primary btn-dark mt-4" type="button" data-bs-toggle="modal" data-bs-target="#locationModal">تغییر موقعیت</button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="locationModal" tabindex="-1" role="dialog" aria-labelledby="locationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">موقعیت</h5>
+                    <button class="ml-2 close" data-bs-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="w-form">
+                        <div class="form-group">
+                            <label for="state">نام استان</label>
+                            <input type="text" id="state" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="city">نام شهر</label>
+                            <input type="text" id="city" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-start">
+                    <button class="btn btn-dark" id="w-change-btn">نمایش</button>
+                    <button class="btn btn-light" data-bs-dismiss="modal">بستن</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
